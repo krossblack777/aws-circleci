@@ -20,6 +20,6 @@ test:
     - vagrant ssh-config aws > ~/.ssh/config
   override:
       - bundle exec knife solo bootstrap aws
-      - bundle exec rake spec::aws
+      - bundle exec rake spec:aws
   post:
       - vagrant destroy aws --force
